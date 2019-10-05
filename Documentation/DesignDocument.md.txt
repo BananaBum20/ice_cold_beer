@@ -1,9 +1,0 @@
-# Ice Cold Beer
-Objecitve
-  Ice Cold Beer is a [insert platform] game based on the Ice Cold Beer arcade game.
-Overview
-  The player has to put a ball into a certain hole using a bar, while having to roll the ball side to side to avoid holes that aren't the target hole.
-Gameplay
-  The player will use the mouse and key board to control the character. The character will be able to move up and down. The player can also lift one side of character to get the ball to roll.
-Player Character
-  The player character is the bar that the ball rest on.
