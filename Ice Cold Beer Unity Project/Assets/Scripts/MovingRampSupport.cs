@@ -24,6 +24,10 @@ public class MovingRampSupport : MonoBehaviour
     void FixedUpdate()
     { /*if the player presses up arrow,
         we move the square up and vise versa*/
+        if (!GameOver.IsGameOver)
+        {
+
         rigidbody.velocity = new Vector2(0, verticalInput * moveSpeed);
+        }
     }
 }
