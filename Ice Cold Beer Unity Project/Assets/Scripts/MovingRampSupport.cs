@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class MovingRampSupport : MonoBehaviour
 {
-    public float moveSpeed = 0.1f;
-    public string inputAxis; 
-    private float verticalInput;
-    private Rigidbody2D rigidbody;
+    private float moveSpeed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Test");
-        rigidbody = GetComponent<Rigidbody2D>();
        // transform.Translate(5,0,0);
-    }
-    private void Update()
-    {
-        verticalInput = Input.GetAxis(inputAxis);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     { /*if the player presses up arrow,
         we move the square up and vise versa*/
-        if (!GameOver.IsGameOver)
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-
-        rigidbody.velocity = new Vector2(0, verticalInput * moveSpeed);
+            transform.Translate(0, moveSpeed, 0);
         }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(0, -moveSpeed, 0);
+        }
+        // Debug.Log("UPDAT METHOD!");
     }
 }
